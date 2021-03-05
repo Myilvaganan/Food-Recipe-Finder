@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Recipe from "./Recipe";
 import Input from "@material-ui/core/Input";
-import TextField from "@material-ui/core/TextField";
+
 import Button from "@material-ui/core/Button";
 import SearchIcon from "@material-ui/icons/Search";
 import "./App.css";
@@ -31,31 +31,26 @@ const App = () => {
     setSearch(e.target.value);
   };
 
-
-
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-    setSearch('');
-      runCount();
-    };
+    setSearch("");
+    runCount();
+  };
 
+  const refreshCount = () => {
+    setCount(0);
+  };
 
-    const refreshCount =()=>{
-      setCount(0);
+  setInterval(refreshCount, 60000);
+
+  const runCount = () => {
+    if (count < 10) {
+      setCount(count + 1);
+    } else {
+      setCount("wait for a min...");
     }
-
-   /*   */
-    setInterval(refreshCount, 60000);
-
-    const runCount=()=>{
-      
-      if(count<10){
-       setCount(count+1)
-      }else{
-        setCount("Sorry! 10 requests/min ...")
-      }
-    }
+  };
 
   return (
     <div className="main">

@@ -9,7 +9,6 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
 import { deepOrange } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
@@ -88,7 +87,7 @@ export default function RecipeReviewCard(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <p style={{color:"red"}}>Ingredients:</p>
+          <p style={{ color: "red" }}>Ingredients:</p>
           <ol>
             {props.ingredients.map((ingredient) => (
               <li>{ingredient.text}</li>

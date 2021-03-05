@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
-  background: url("https://images.pexels.com/photos/941869/pexels-photo-941869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background: url("https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-color: #1d1c1c;
   background-position: center;
   min-height: 100vh;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
-    font-family: 'Pacifico',
+  font-family: 'Pacifico',
     cursive;
 }
 
@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   margin: 5rem auto;
 }
@@ -36,6 +36,7 @@ form {
     gap: 1.5rem;
     text-align: center;
   }
+
   .text {
     font-size: 0.8rem;
   }
@@ -60,11 +61,11 @@ form button {
   text-shadow: -2px -2px rgba(255, 255, 255, 0.863);
 }
 
-.count{
-  font-size: 1rem;
+.count {
+  font-size: 1.5rem;
   background-color: rgba(250, 250, 250, 0.171);
   padding: 1rem;
   border-radius: 50%;
   color: rgb(255, 255, 255);
- font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
