@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/recipe-food-app-react/static/css/main.a40e55b9.chunk.css",
-    "main.js": "/recipe-food-app-react/static/js/main.f5ddbbe6.chunk.js",
-    "main.js.map": "/recipe-food-app-react/static/js/main.f5ddbbe6.chunk.js.map",
+    "main.css": "/recipe-food-app-react/static/css/main.02ad6b05.chunk.css",
+    "main.js": "/recipe-food-app-react/static/js/main.12bf41c7.chunk.js",
+    "main.js.map": "/recipe-food-app-react/static/js/main.12bf41c7.chunk.js.map",
     "runtime-main.js": "/recipe-food-app-react/static/js/runtime-main.2e6b496f.js",
     "runtime-main.js.map": "/recipe-food-app-react/static/js/runtime-main.2e6b496f.js.map",
     "static/js/2.f1d67414.chunk.js": "/recipe-food-app-react/static/js/2.f1d67414.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.ec36b288.chunk.js": "/recipe-food-app-react/static/js/3.ec36b288.chunk.js",
     "static/js/3.ec36b288.chunk.js.map": "/recipe-food-app-react/static/js/3.ec36b288.chunk.js.map",
     "index.html": "/recipe-food-app-react/index.html",
-    "static/css/main.a40e55b9.chunk.css.map": "/recipe-food-app-react/static/css/main.a40e55b9.chunk.css.map",
+    "static/css/main.02ad6b05.chunk.css.map": "/recipe-food-app-react/static/css/main.02ad6b05.chunk.css.map",
     "static/js/2.f1d67414.chunk.js.LICENSE.txt": "/recipe-food-app-react/static/js/2.f1d67414.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2e6b496f.js",
     "static/js/2.f1d67414.chunk.js",
-    "static/css/main.a40e55b9.chunk.css",
-    "static/js/main.f5ddbbe6.chunk.js"
+    "static/css/main.02ad6b05.chunk.css",
+    "static/js/main.12bf41c7.chunk.js"
   ]
 }
