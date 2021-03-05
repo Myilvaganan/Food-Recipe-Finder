@@ -1,70 +1,70 @@
-body{
-   background: url("https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-   background-color: #1d1c1c;
-   background-position: center;
-   min-height: 100vh;
-   background-repeat: no-repeat;
-   background-size: cover;
-   z-index: -2;
-}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-
-.opacity-reducer{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 315vh;
-  width: 100%;
+body {
+  background: url("https://images.pexels.com/photos/941869/pexels-photo-941869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-color: #1d1c1c;
-  opacity: 0.6;
-  z-index: -1;
+  background-position: center;
+  min-height: 100vh;
+  background-repeat: repeat;
+  background-size: cover;
+    font-family: 'Pacifico',
+    cursive;
 }
 
-
-.Content{
+.Content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin: 5rem auto;
-
 }
 
-form{
-  width: 80%;
-  background-color: #fafeff;
+form {
+  width: 100%;
+  background-color: #383838bd;
   margin: 2rem auto;
-  border-radius: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 @media only screen and (max-width: 906px) {
   form {
     flex-direction: column;
-    gap:1.5rem;
+    gap: 1.5rem;
     text-align: center;
   }
-  .text{
+  .text {
     font-size: 0.8rem;
   }
 }
 
-
-form button{
-  background-color: orangered !important;
+form button {
+  background-color: rgb(255, 102, 0) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
-form input{
-  width: 100% !important;
-  color: orangered !important;
+.input {
+  color: rgb(255, 255, 255) !important;
+  caret-color: white;
+  width: 20rem !important;
+  border-bottom: 1px solid black !important;
 }
 
-.text{
-  font-size: 1.5rem;
+.text {
+  font-size: 2rem;
   font-weight: 700;
-  color: orangered;
+  color: rgb(255, 102, 0);
+  text-shadow: -2px -2px rgba(255, 255, 255, 0.863);
+}
+
+.count{
+  font-size: 1rem;
+  background-color: rgba(250, 250, 250, 0.171);
+  padding: 1rem;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

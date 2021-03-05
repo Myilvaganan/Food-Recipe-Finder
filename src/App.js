@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Recipe from "./Recipe";
 import Input from "@material-ui/core/Input";
+import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import SearchIcon from "@material-ui/icons/Search";
 import "./App.css";
@@ -10,6 +11,8 @@ const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
+  const [count, setCount] = useState(0);
+
   const APP_ID = "6ad59d2f";
   const APP_KEY = "07416716df80e17aa65d0e7f10cfdbe0";
   const example_Url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
@@ -28,11 +31,31 @@ const App = () => {
     setSearch(e.target.value);
   };
 
+
+
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
     setSearch('');
+      runCount();
     };
+
+
+    const refreshCount =()=>{
+      setCount(0);
+    }
+
+   /*   */
+    setInterval(refreshCount, 60000);
+
+    const runCount=()=>{
+      
+      if(count<10){
+       setCount(count+1)
+      }else{
+        setCount("Sorry! 10 requests/min ...")
+      }
+    }
 
   return (
     <div className="main">
@@ -40,16 +63,23 @@ const App = () => {
 
       <div className="App">
         <form noValidate autoComplete="off" onSubmit={getSearch}>
-          <p className="text">MYIL's KITCHEN</p>
+          <p className="text">Myil's Kitchen</p>
           <Input
-            placeholder="Search here for Delicious Food..."
+            placeholder="Search here ..."
             type="text"
             value={search}
             onChange={getInput}
+            className="input"
           />
-          <Button variant="contained" startIcon={<SearchIcon />} size="medium" type="submit">
+          <Button
+            variant="contained"
+            startIcon={<SearchIcon />}
+            size="medium"
+            type="submit"
+          >
             RECIPE
           </Button>
+          <p className="count">{count}</p>
         </form>
 
         <div className="Content">

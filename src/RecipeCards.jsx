@@ -88,7 +88,7 @@ export default function RecipeReviewCard(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Ingredients:</Typography>
+          <p style={{color:"red"}}>Ingredients:</p>
           <ol>
             {props.ingredients.map((ingredient) => (
               <li>{ingredient.text}</li>
