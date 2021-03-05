@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+body{
+   background: url("https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+   background-color: #1d1c1c;
+   background-position: center;
+   min-height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   z-index: -2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.opacity-reducer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1d1c1c;
+  opacity: 0.6;
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Content{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 80%;
+  margin: 5rem auto;
+
 }
 
-.App-link {
-  color: #61dafb;
+form{
+  width: 80%;
+  background-color: #fafeff;
+  margin: 2rem auto;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+
+form button{
+  background-color: orangered !important;
+}
+
+form input{
+  width: 100% !important;
+  color: orangered !important;
+}
+
+.text{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: orangered;
 }
