@@ -13,35 +13,33 @@ import Typography from "@material-ui/core/Typography";
 import { deepOrange } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
-import ArrowLeft from "@material-ui/icons/ArrowLeft";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles((theme) => ({
-
   root: {
-    width:300,
+    width: 300,
     minHeight: 400,
     maxWidth: 350,
-    margin: "0.5rem"
+    margin: "0.5rem",
   },
   media: {
     height: 0,
-    paddingTop: "56.25%" // 16:9
+    paddingTop: "56.25%", // 16:9
   },
   expand: {
     transform: "rotate(0deg)",
     marginLeft: "auto",
     transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest
-    })
+      duration: theme.transitions.duration.shortest,
+    }),
   },
   expandOpen: {
-    transform: "rotate(180deg)"
+    transform: "rotate(180deg)",
   },
   avatar: {
-    backgroundColor: deepOrange[500]
-  }
+    backgroundColor: deepOrange[500],
+  },
 }));
 
 export default function RecipeReviewCard(props) {
@@ -51,13 +49,13 @@ export default function RecipeReviewCard(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+  const calorie = Math.floor(props.calories);
   return (
     <Card className={classes.root}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            C
+            {props.title[0]}
           </Avatar>
         }
         action={
@@ -66,15 +64,10 @@ export default function RecipeReviewCard(props) {
           </IconButton>
         }
         title={props.title}
-        subheader={props.calories}
+        subheader={props.source}
       />
-      <CardMedia
-        className={classes.media}
-        image={props.image}
-      />
-      <CardContent>
-        Calories: 39.1000
-      </CardContent>
+      <CardMedia className={classes.media} image={props.image} />
+      <CardContent>Calories: {calorie} g</CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
@@ -84,7 +77,7 @@ export default function RecipeReviewCard(props) {
         </IconButton>
         <IconButton
           className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded
+            [classes.expandOpen]: expanded,
           })}
           onClick={handleExpandClick}
           aria-expanded={expanded}
@@ -96,13 +89,13 @@ export default function RecipeReviewCard(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Ingredients:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and
-            set aside for 10 minutes.
-          </Typography>
+          <ol>
+            {props.ingredients.map((ingredient) => (
+              <li>{ingredient.text}</li>
+            ))}
+          </ol>
         </CardContent>
       </Collapse>
     </Card>
-    
   );
 }
